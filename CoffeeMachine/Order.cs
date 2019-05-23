@@ -2,18 +2,9 @@
 
 namespace CoffeeMachine
 {
-    public class Order
+    public abstract class Order
     {
-        private string v;
-
-        public Order(string v)
-        {
-            this.v = v;
-        }
-
-        public object GetDrinkType()
-        {
-            return "C";
-        }
+        protected int NumberOfSugar { get; set; }
+        public abstract string TranslateOrder();
     }
 }
